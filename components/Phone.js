@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
 
   errorText: {
     color: '#ffffff',
+    textAlign: 'center',
   },
 });
 
@@ -62,8 +63,8 @@ const Phone = ({
       pointerEvents={errorMessage ? 'auto' : 'none'}
     >
       <Text style={styles.errorText}>
-        {errorMessage}
-        Please check readme.md and refresh
+        {errorMessage}{'\n'}
+        Please check readme.md and reload
       </Text>
     </View>
   </View>

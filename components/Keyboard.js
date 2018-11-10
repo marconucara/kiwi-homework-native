@@ -4,15 +4,18 @@ import { StyleSheet, View } from 'react-native';
 
 import PhoneButton from './PhoneButton';
 
-// const KeyboardWrapper = styled.div`
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
-//   grid-gap: 2px;
-// `;
+const styles = StyleSheet.create({
+  wrapper: {
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+});
 
 const Keyboard = ({ onNumberClick, onToggleClick, onDeleteClick, onEndClick }) => (
-  <View>
+  <View style={styles.wrapper}>
     <PhoneButton>1</PhoneButton>
     <PhoneButton onClick={() => onNumberClick(2)} hint="abc">2</PhoneButton>
     <PhoneButton onClick={() => onNumberClick(3)} hint="def">3</PhoneButton>

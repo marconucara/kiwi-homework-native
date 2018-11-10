@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, StatusBar, View } from 'react-native';
+import { Constants } from 'expo'
 import { Provider } from 'react-redux';
 
 import Phone from 'kiwi-homework-web/src/Phone/container';
@@ -8,7 +9,8 @@ import PhoneComponent from './components/Phone';
 import configureStore from 'kiwi-homework-web/src/Phone/store';
 
 const fetchHintsApi = async number => {
-  return fetch(`${process.env.REACT_APP_API_ENDPOINT || '/hints.json?'}${number}`)
+
+  return fetch(`${Constants.manifest.extra.apiEndPoint}${number}`)
     .then(response => response.json())
     .then(json => json.hints);
 }
@@ -26,6 +28,10 @@ const styles = StyleSheet.create({
 
 const App = () => (
   <View style={styles.container}>
+    <StatusBar
+      backgroundColor="blue"
+      barStyle="dark-content"
+    />
     <Provider store={store}>
       <Phone PhoneComponent={PhoneComponent} />
     </Provider>
