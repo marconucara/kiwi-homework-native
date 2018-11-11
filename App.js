@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Phone from 'kiwi-homework-web/src/Phone/container';
 import PhoneComponent from './components/Phone';
 
-import configureStore from 'kiwi-homework-web/src/Phone/store';
+import configureStore from './store';
 
 const fetchHintsApi = async number => {
 

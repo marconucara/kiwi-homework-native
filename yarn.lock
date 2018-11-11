@@ -7061,7 +7061,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
 
 "kiwi-homework-web@https://github.com/marconucara/kiwi-homework-web":
   version "0.1.0"
-  resolved "https://github.com/marconucara/kiwi-homework-web#a5872adf55e99d8daba20413fa30a7497dea1db8"
+  resolved "https://github.com/marconucara/kiwi-homework-web#7842bdd6d1366d48851a9ccb4cdc54e4f048187a"
   dependencies:
     enzyme "^3.7.0"
     enzyme-adapter-react-16 "^1.7.0"
